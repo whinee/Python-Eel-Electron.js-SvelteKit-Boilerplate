@@ -16,7 +16,7 @@ git clone https://github.com/whinee/Python-Eel-Electron.js-SvelteKit-Boilerplate
 
 Python-Eel-Electron.js-SvelteKit-Boilerplate is, as the name implies, a Python-Eel-Electron.js-SvelteKit boilerplate for making a functional desktop app using said technologies. This combines two main technologies:
 
-- Electron: 
+- Electron: ["A framework that allows developers to build cross-platform desktop applications using web technologies"](https://github.com/electron/electron)
 - Eel: A Python library for ["making simple Electron-like offline HTML/JS GUI apps."](https://github.com/python-eel/Eel)
 - SvelteKit: ["A framework for rapidly developing robust, performant web applications using Svelte"](https://kit.svelte.dev/docs/introduction)
   - SvelteKit will be running in SPA mode.

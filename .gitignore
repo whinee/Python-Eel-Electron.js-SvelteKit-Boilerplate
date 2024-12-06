@@ -1,3 +1,11 @@
+################################################################################
+#                                 USER DEFINED                                 #
+################################################################################
+
+# User-defined Ignored Folders
+.history/
+.venv
+
 .DS_Store
 node_modules
 /build
@@ -13,7 +21,3 @@ __pycache__
 dist
 build
 *.spec
-/test-results/
-/playwright-report/
-/playwright/.cache/
-tests-examples

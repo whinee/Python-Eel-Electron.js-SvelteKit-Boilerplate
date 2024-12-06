@@ -1,31 +1,55 @@
 {
-  "name": "create-sveltekit-eel-app",
-  "version": "0.3.8",
-  "main": "./bin/cli.js",
-  "bin": "./bin/cli.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WiIIiamTang/create-sveltekit-eel-app"
-  },
-  "homepage": "https://github.com/WiIIiamTang/create-sveltekit-eel-app",
-  "author": "William Tang",
-  "license": "MIT",
-  "scripts": {},
-  "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "eslint": "^8.28.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "prettier": "^2.8.0"
-  },
-  "type": "module",
-  "keywords": [
-    "svelte",
-    "sveltekit",
-    "python-eel",
-    "gui"
-  ],
-  "dependencies": {
-    "inquirer": "^9.1.4"
-  }
+	"name": "python-eel-electron.js-sveltekit-boilerplate",
+	"version": "1.0.0",
+	"main": "main.cjs",
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "playwright test",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest run",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"start:eel": "yarn build && python app.py --console",
+		"start:eel-nb": "python app.py --console",
+		"start:eel-dev": "python app.py --console --dev",
+		"build:eel-generate-spec": "yarn build && python -m eel app.py build -y",
+		"build:eel": "yarn build && pyinstaller app.spec -y",
+		"install-deps": "yarn install; python3.10 -m venv .venv; poetry env use .venv/bin/python; rm -rf poetry.lock; poetry install --no-root --with dev"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.49.0",
+		"@sveltejs/adapter-auto": "^3.3.1",
+		"@sveltejs/adapter-static": "^3.0.6",
+		"@sveltejs/kit": "^2.9.0",
+		"@sveltejs/vite-plugin-svelte": "^5.0.1",
+		"@typescript-eslint/eslint-plugin": "^8.17.0",
+		"@typescript-eslint/parser": "^8.17.0",
+		"autoprefixer": "^10.4.20",
+		"electron": "^33.2.1",
+		"eslint": "^9.16.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.46.1",
+		"npm-check-updates": "^17.1.11",
+		"postcss": "^8.4.49",
+		"prettier": "^3.4.2",
+		"prettier-plugin-svelte": "^3.3.2",
+		"svelte": "^5.7.1",
+		"svelte-check": "^4.1.1",
+		"tailwindcss": "^3.4.16",
+		"tslib": "^2.8.1",
+		"typescript": "^5.7.2",
+		"vite": "^6.0.3",
+		"vitest": "^2.1.8"
+	},
+	"type": "module",
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"python-eel",
+		"gui"
+	]
 }

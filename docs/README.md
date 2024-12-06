@@ -12,6 +12,10 @@ git clone https://github.com/whinee/Python-Eel-Electron.js-SvelteKit-Boilerplate
 
 </div>
 
+## Important
+
+I currently do not know how to package an Electron.js binary to the build. So, if you know how to do that, please make a pull request fixing that. In the meantim, the builds are broken.
+
 ## About
 
 Python-Eel-Electron.js-SvelteKit-Boilerplate is, as the name implies, a Python-Eel-Electron.js-SvelteKit boilerplate for making a functional desktop app using said technologies. This combines two main technologies:
